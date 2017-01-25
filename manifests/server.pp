@@ -235,6 +235,7 @@ class openldap::server (
     validate_ldap_uri($update_ref)
   }
   validate_string($user)
+  validate_bool($memberof)
 
   if $chain and ! $update_ref {
     fail('Chaining requires an update referral URL')

@@ -9,3 +9,9 @@ spec/fixtures/*
 pkg
 log
 coverage
+*.iml
+*.ipr
+*.iws
+*.swp
+.idea/
+puppet-openldap.iml
