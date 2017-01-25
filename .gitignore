@@ -9,3 +9,7 @@ spec/fixtures/*
 pkg
 log
 coverage
+*.iml
+*.ipr
+*.iws
+*.swp
