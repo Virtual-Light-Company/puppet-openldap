@@ -2,7 +2,6 @@ require 'puppetlabs_spec_helper/module_spec_helper'
 require 'rspec-puppet-facts'
 
 unless RUBY_VERSION =~ /^1\.8/
-  require 'simplecov'
   require 'coveralls'
 end
 
