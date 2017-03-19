@@ -535,7 +535,7 @@ class openldap::server::config {
           'oldRefintConfig',
         ],
         'olcOverlay'          => $overlay_index['refint'],
-        'olcRefintAttributes' => $::openldap::server::refint_attributes,
+        'olcRefintAttributes' => join($::openldap::server::refint_attributes, ' '),
         'olcRefintNothing'    => $::openldap::server::refint_nothing,
       }),
       require    => Openldap['cn=module{0},cn=config'],
