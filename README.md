@@ -461,6 +461,24 @@ extended operation is normally used.
 Setting this to `true` makes a bind to a locked account return an
 `AccountLocked` error instead of `InvalidCredentials`.
 
+##### `refint`
+
+Setting this to `true` enables the refint overlay. Typically you should also
+provide `refint_attributes` with an array of attributes that would be providing
+ the referential integrity to. See the entry in `slapo-refint(5)`
+man page for more details.
+
+##### `refint_attributes`
+
+An array of string attributes that have their referential integrity maintained.
+Ignored if `refint` is set to `false`.
+
+##### `refint_nothing`
+
+The default value to place into the attribute when the last attribute value
+has been removed. An empty attribute value list may be prohibited by the
+schema, in which case this value will be placed in as a placeholder.
+
 ##### `replica_dn`
 
 The Distinguished Name used by consumer/slave servers to connect to this
