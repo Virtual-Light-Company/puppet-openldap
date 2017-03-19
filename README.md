@@ -477,7 +477,8 @@ Ignored if `refint` is set to `false`.
 
 The default value to place into the attribute when the last attribute value
 has been removed. An empty attribute value list may be prohibited by the
-schema, in which case this value will be placed in as a placeholder.
+schema, in which case this value will be placed in as a placeholder. Ignored
+if `refint` is set to `false`.
 
 ##### `replica_dn`
 
