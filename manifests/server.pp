@@ -51,6 +51,9 @@ class openldap::server (
   $ppolicy_forward_updates    = undef,
   $ppolicy_hash_cleartext     = undef,
   $ppolicy_use_lockout        = undef,
+  $refint                     = false,
+  $refint_attributes          = [],
+  $refint_nothing             = undef,
   $replica_dn                 = undef,
   $schema_dir                 = $::openldap::params::schema_dir,
   $security                   = undef,
@@ -173,6 +176,15 @@ class openldap::server (
     }
     if $ppolicy_use_lockout {
       validate_bool($ppolicy_use_lockout)
+    }
+  }
+  validate_bool($refint)
+  if $refint {
+    if $refint_attributes {
+      validate_array($refint_attributes)
+    }
+    if $refint_nothing {
+      validate_string($refint_nothing)
     }
   }
   validate_absolute_path($schema_dir)
