@@ -13,5 +13,5 @@ coverage
 *.ipr
 *.iws
 *.swp
-.idea
+.idea/*
 puppet-openldap.iml
