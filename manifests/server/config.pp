@@ -532,7 +532,7 @@ class openldap::server::config {
       attributes => delete_undef_values({
         'objectClass' => [
           'olcOverlayConfig',
-          'oldRefintConfig',
+          'olcRefintConfig',
         ],
         'olcOverlay'          => $overlay_index['refint'],
         'olcRefintAttributes' => join($::openldap::server::refint_attributes, ' '),
