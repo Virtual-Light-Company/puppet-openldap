@@ -538,7 +538,7 @@ describe 'openldap::server' do
             super().merge(
               {
                 :refint            => true,
-                :refint_attributes => [ 'member' ]
+                :refint_attributes => [ 'member' ],
                 :refint_nothing    => 'cn=dummy,dc=example,dc=com'
               }
             )
