@@ -530,7 +530,7 @@ class openldap::server::config {
     openldap { "olcOverlay=${overlay_index['refint']},olcDatabase={${db_index}}${db_backend},cn=config":
       ensure     => present,
       attributes => delete_undef_values({
-        'objectClass' => [
+        'objectClass'         => [
           'olcOverlayConfig',
           'olcRefintConfig',
         ],
