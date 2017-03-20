@@ -539,6 +539,7 @@ describe 'openldap::server' do
               {
                 :refint            => true,
                 :refint_attributes => [ 'member' ]
+                :refint_nothing    => 'cn=dummy,dc=example,dc=com'
               }
             )
           end
@@ -575,8 +576,9 @@ describe 'openldap::server' do
                 'olcOverlayConfig',
                 'olcRefintConfig',
               ],
-              'olcOverlay'   => ['{0}refint'],
-              'olcRefintAttributes' => [ 'member' ]
+              'olcOverlay'          => ['{0}refint'],
+              'olcRefintAttributes' => [ 'member' ],
+              'olcRefintNothing'    => [ 'cn=dummy,dc=example,dc=com' ]
             }
           ) }
 
