@@ -576,7 +576,7 @@ describe 'openldap::server' do
                 'olcRefintConfig',
               ],
               'olcOverlay'   => ['{0}refint'],
-              'olcRefintAttributes' => 'member'
+              'olcRefintAttributes' => [ 'member' ]
             }
           ) }
 
@@ -649,7 +649,7 @@ describe 'openldap::server' do
                 'olcRefintConfig',
               ],
               'olcOverlay'   => ['{0}refint'],
-              'olcRefintAttributes' => 'member member2'
+              'olcRefintAttributes' => [ 'member member2' ]
             }
           ) }
 
